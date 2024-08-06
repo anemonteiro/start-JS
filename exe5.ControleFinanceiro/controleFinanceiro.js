@@ -1,23 +1,17 @@
-let valorInicial;
+let valorInicial = prompt("Quanto de dinheiro você possui? (R$):");
+valorInicial= parseFloat(valorInicial);
 let opcao;
 do{
-    valorInicial = prompt("Quanto de dinheiro você possui? (R$):");
-    valorInicial= parseFloat(valorInicial);
-
-    opcao = prompt(`${valorInicial} R$. Você deseja:\n1- Depositar\n2- Sacar\n3- Sair`)
+    opcao = prompt(`Saldo disponível: ${valorInicial} R$.\nVocê deseja:\n1- Depositar\n2- Sacar\n3- Sair`)
 
     switch (opcao) {
         case "1":
-            depositar = prompt("Qual a quantidade a ser depositada? R$:");
-            depositar = parseFloat(depositar);
-            depositar += valorInicial;
-            alert(`Depóstito feito, valor atual: ${depositar} R$.`)
+            valorInicial += parseFloat(prompt("Informe a quantia a ser depositada:"));
+            alert(`Depósito realizado com sucesso!\nSaldo atual: ${valorInicial} R$.`)
             break;
         case "2":
-            sacar = prompt("Qual a quantidade a ser sacada? R$:");
-            sacar = parseFloat(sacar);
-            valorInicial -= sacar;
-            alert(`Saque feito, valor atual: ${valorInicial} R$.`)
+            valorInicial -= parseFloat(prompt("Informe a quantia a ser sacada:"));
+            alert(`Saque realizado com sucesso!\nSaldo atual: ${valorInicial} R$.`)
             break;
         case "3":
             break;
