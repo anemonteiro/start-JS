@@ -10,3 +10,4 @@ if (number === 0) {
 }
 
 alert(`Resultado da Multiplicação:\n${multiplicacao.join(`\n`)}`);
+let = " ";
