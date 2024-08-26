@@ -3,23 +3,23 @@ let menu;
 do {
     let esperaPacientes = [];
     for (let i = 0; i <= pacientes.length-1; i++) {
-        esperaPacientes.push(`${i+1}º - ${pacientes[i]}`)
+        esperaPacientes.push(`${i+1}º - ${pacientes[i]}`);
     }
     
-    menu = prompt("Lista de espera:\n" + esperaPacientes.join("\n") + ("\n\nEscolha uma ação:\n1- Cadastrar novo paciente\n2- Consultar paciente\n3- Sair"))
+    menu = prompt("Lista de espera:\n" + esperaPacientes.join("\n") + ("\n\nEscolha uma ação:\n1- Cadastrar novo paciente\n2- Consultar paciente\n3- Sair"));
 
     switch (menu) {
         case "1": 
-        let novoPaciente = prompt("Nome do paciente:")
-        pacientes.push(novoPaciente)
+        let novoPaciente = prompt("Nome do paciente:");
+        pacientes.push(novoPaciente);
         break;
 
         case "2": 
-        alert(`Primeiro da fila: ${pacientes.shift()}`)
+        alert(`Paciente: ${pacientes.shift()} será atendida agora e sairá da fila.`);
         break;
 
         case "3":
-        alert("Saindo...")
+        alert("Saindo...");
         break
 1
         default:

@@ -7,14 +7,28 @@ do {
 
     switch (opcao) {
         case "1":
-            cartas.push(prompt("Nome da carta:"));
+            let novaCarta = prompt("Nome da carta:");
+            if(novaCarta) {
+                cartas.push(novaCarta);
+                alert("Carta adicionada com sucesso!");
+            } else {
+                alert("Nenhuma carta adicionada.");
+            }
             break;
 
         case "2":
-            alert("Carta do topo: " + cartas[cartas.length-1]);
+            if(cartas.length > 0) {
+            alert("Você puxou a carta do topo: " + cartas.pop());
+            } else {
+                alert("Não há cartas no baralho")
+            }
             break;
 
         case "3":
-            alert("Obrigada por jogar conosco, até a próxima!")
+            alert("Obrigada por jogar conosco, até a próxima!");
+            break;
+
+        default:
+            alert("Essa opção não existe!");
     }
 } while(opcao !== "3");
