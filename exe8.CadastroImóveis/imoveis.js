@@ -1,4 +1,4 @@
-imoveisCadastrados = [];
+let imoveisCadastrados = [];
 let menu;
 
 do {
